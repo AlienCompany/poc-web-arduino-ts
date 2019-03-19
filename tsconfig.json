@@ -1,0 +1,10 @@
+{
+  "compilerOptions":  {
+    "inlineSourceMap": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src"
+  ]
+}
