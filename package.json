@@ -19,8 +19,7 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "js-server": "node ./src/server/index.js",
-    "js-app": "node ./src/app/index.js",
+    "js-server": "node ./dist/server/index.js",
     "server": "ts-node ./src/server/index.ts",
     "compile": "tsc -p ./"
   },
