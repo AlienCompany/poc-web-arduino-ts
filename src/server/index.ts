@@ -58,7 +58,7 @@ function onClientConnection(client: Socket) {
 
 function init() {
 	server.listen(port, () => myLog('+ Server listen on port: ' + port));
-	app.use(express.static(__dirname + '/public'));
+	app.use(express.static(__dirname + '/public')); //requête sur le site redirigé vers le dossier public
 	ioServer.on('connection', (socket: Socket) => onClientConnection(socket));
 	parser.on('data', (line: string) => receiveArduinoLine(line));
 }
