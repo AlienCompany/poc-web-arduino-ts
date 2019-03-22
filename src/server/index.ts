@@ -7,6 +7,7 @@ import * as SerialPort from 'serialport';
 import { myLog } from './myLog';
 import IoServer = io.Server;
 import Readline = SerialPort.parsers.Readline;
+import {HomeComponentStatus} from "../model/home-component";
 
 const app: Express = express();
 const server: Server = new Server(app);
@@ -15,14 +16,6 @@ const port: number = 8888;
 const arduinoCom: string = 'COM6';
 const usbPort: SerialPort = new SerialPort(arduinoCom);
 const parser: Readline = usbPort.pipe(new Readline({delimiter: '\n'}));
-
-// Describe the content of SrvEvent3 (good practice)
-interface SrvEvent3 {
-	nom: string;
-	prenom: string;
-	autrePrenom: string[];
-	age: number;
-}
 
 function sendToArduino(data: string) {
 	myLog('OUT Serial', 'A <- ' + data);
@@ -36,15 +29,11 @@ function receiveArduinoLine(line: string): void {
 function onClientConnection(client: Socket) {
 	myLog('+ New socket!');
 
-	client.on('customSrvEvent1', (data: string) => console.log('customSrvEvent1', data));
-	client.on('customSrvEvent2', (data: { btn: number, input: string }) => console.log('customSrvEvent2', data));
-	client.on('customSrvEvent3', (data: SrvEvent3) => {
-		console.log('customSrvEvent3 from ' + data.prenom + ' ' + data.nom);
-		console.log('Autre Prenom');
-		for (let i = 0; i < data.autrePrenom.length; i++){
-			console.log('\t- ' + data.autrePrenom[i]);
-		}
-		console.log('all data:', data);
+	client.on('srvEventBtnClick',(data: HomeComponentStatus) => {
+
+		console.log('srvEventBtnClick', data);
+		sendToArduino('change,' + data.roomName + ',' + data.componentName + ',' + data.state);
+
 	});
 
 	client.on('disconnect', () => {
