@@ -13,12 +13,13 @@ const app: Express = express();
 const server: Server = new Server(app);
 const ioServer: IoServer = io(server);
 const port: number = 8888;
-const arduinoCom: string = 'COM6';
-const usbPort: SerialPort = new SerialPort(arduinoCom);
+const arduinoCom: string = 'COM16';
+const usbPort: SerialPort = new SerialPort(arduinoCom, {baudRate: 115200});
 const parser: Readline = usbPort.pipe(new Readline({delimiter: '\n'}));
 
 function sendToArduino(data: string) {
 	myLog('OUT Serial', 'A <- ' + data);
+	data = data + '\n';
 	usbPort.write(data);
 }
 
@@ -40,8 +41,8 @@ function onClientConnection(client: Socket) {
 		myLog('- Socket disconnected!');
 	});
 
-	client.emit('customCliEvent1', 'test');
-	client.emit('customCliEvent2', {myNum: 543210, myStr: 'abcde'});
+	//client.emit('customCliEvent1', 'test');
+	//client.emit('customCliEvent2', {myNum: 543210, myStr: 'abcde'});
 }
 
 
