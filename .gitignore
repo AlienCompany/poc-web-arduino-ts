@@ -2,3 +2,6 @@ dist
 node_modules
 .idea
 *.iml
+src/server/public/script\.js
+
+src/server/index\.js

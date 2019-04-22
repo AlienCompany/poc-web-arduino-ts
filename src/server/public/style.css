@@ -1,0 +1,10 @@
+/*.component.enable .btn.on, .component:not(.enable) .btn.off {
+
+
+}
+
+.component:not(.enable) .btn.on, .component.enable .btn.off {
+
+
+}
+*/

@@ -4,12 +4,12 @@ import Socket = SocketIOClient.Socket;
 
 const defaultState = true;
 const urlServerIo = 'http://localhost:8888';
-let socket: Socket ;
+let socket: Socket;
 
 // noinspection JSUnusedLocalSymbols
 function init() {
 
-    socket  = io.connect(urlServerIo);
+    socket = io.connect(urlServerIo);
 
     /**
      * homeComponents est la liste de tous les {@link HomeComponent composants} connectés de la maison
@@ -94,6 +94,8 @@ function initButtonListerner(homeComponents: HomeComponent[]): void {
 
             console.log("On : componentId = ", homeComponent.component.id);
             socket.emit("srvEventBtnClick", componentStatus);
+
+            homeComponent.component.classList.add('enable');
         };
         btnOff.onclick = () => {
 
@@ -105,6 +107,8 @@ function initButtonListerner(homeComponents: HomeComponent[]): void {
 
             console.log("Off : componentId = ", homeComponent.component.id);
             socket.emit("srvEventBtnClick", componentStatus);
+
+            homeComponent.component.classList.remove('enable');
         };
 
     });
