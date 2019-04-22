@@ -23,16 +23,31 @@ function init() {
     //Listen
     socket.on('connect', () => {
         console.log("connect");
+        socket.emit('getState');
     });
+
+    socket.on('state', (data: HomeComponentStatus) => {
+
+        const hm = homeComponents.find((homeComponent)=> homeComponent.room.id === data.roomName && homeComponent.component.id === data.componentName);
+        if(hm != null){
+            console.log('state', data, hm);
+        }else{
+            console.log('nostate', data);
+        }
+    });
+
     socket.on('disconnect', () => {
         console.log("disconnect");
     });
+   /*
     socket.on('customCliEvent1', (message) => {
         console.log("customCliEvent1", message);
     });
     socket.on('customCliEvent2', (data) => {
         console.log(data);
     });
+    */
+
 }
 
 /**
