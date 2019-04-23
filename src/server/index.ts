@@ -25,7 +25,9 @@ function sendToArduino(data: string) {
 function receiveArduinoLine(line: string): void {
     line = line.replace(/\r/g, ''); // RegExp replace all \r by nothing
     myLog('IN Serial', 'A -> ' + line);
+
     let msg = line.split(',');
+
     if (msg[0] == "state") {
         let homeComponentStatus: HomeComponentStatus = {
             roomName: msg[1],
@@ -33,7 +35,7 @@ function receiveArduinoLine(line: string): void {
             state: msg[3] === '1'
         };
 
-        ioServer.emit('state', homeComponentStatus);
+        ioServer.emit('onReceiveComponentsStates', homeComponentStatus);
     }
 }
 

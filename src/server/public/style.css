@@ -8,3 +8,9 @@
 
 }
 */
+.component{
+    background: #ffc5c5;
+}
+.component.enable{
+    background: #baffc0;
+}

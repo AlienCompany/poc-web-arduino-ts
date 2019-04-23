@@ -4,11 +4,12 @@
 <head>
     <title>Exemple</title>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css">
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
-<body onload="init()"> 
-    <input type="text" id="input"/>
+<body onload="init()" class="offline">
+
     <button id="btnEnvoyer1"> btn1</button>
     <button id="btnEnvoyer2"> btn2</button>
     <button id="btnEnvoyer3"> btn3</button>
@@ -16,7 +17,7 @@
     </div>
 
     <div id="ext" class="room">
-        <div id="light" class="component">
+        <div id="light" class="component enable">
             <div>img</div>
             <button class="btn on">On</button>
             <button class="btn off">Off</button>

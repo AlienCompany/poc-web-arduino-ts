@@ -24,29 +24,41 @@ function init() {
     socket.on('connect', () => {
         console.log("connect");
         socket.emit('getState');
+        document.body.classList.remove('offline');
+        document.body.classList.add('online');
     });
 
-    socket.on('state', (data: HomeComponentStatus) => {
+    socket.on('onReceiveComponentsStates', (data: HomeComponentStatus) => {
 
-        const hm = homeComponents.find((homeComponent)=> homeComponent.room.id === data.roomName && homeComponent.component.id === data.componentName);
-        if(hm != null){
-            console.log('state', data, hm);
-        }else{
-            console.log('nostate', data);
+        const hc = homeComponents.find((homeComponent) =>
+            homeComponent.room.id === data.roomName && homeComponent.component.id === data.componentName);
+
+        if (hc != null) {
+            debugger;
+            if (hc.state !== data.state) {
+                hc.state = data.state;
+                if (hc.state) {
+                    hc.component.classList.add('enable');
+                } else {
+                    hc.component.classList.remove('enable');
+                }
+            }
         }
     });
 
     socket.on('disconnect', () => {
         console.log("disconnect");
+        document.body.classList.remove('online');
+        document.body.classList.add('offline');
     });
-   /*
-    socket.on('customCliEvent1', (message) => {
-        console.log("customCliEvent1", message);
-    });
-    socket.on('customCliEvent2', (data) => {
-        console.log(data);
-    });
-    */
+    /*
+     socket.on('customCliEvent1', (message) => {
+         console.log("customCliEvent1", message);
+     });
+     socket.on('customCliEvent2', (data) => {
+         console.log(data);
+     });
+     */
 
 }
 
@@ -81,6 +93,7 @@ function getHomeComponents(): HomeComponent[] {
                 btnOn: btnOn,
                 btnOff: btnOff
             };
+            debugger;
             homeComponents.push(homeComponent);
 
         }
