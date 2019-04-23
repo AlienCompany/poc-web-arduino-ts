@@ -1,8 +1,6 @@
 import {HomeComponent, HomeComponentStatus} from "../../model/home-component";
 import Socket = SocketIOClient.Socket;
 
-
-const defaultState = true;
 const urlServerIo = 'http://localhost:8888';
 let socket: Socket;
 
@@ -89,7 +87,7 @@ function getHomeComponents(): HomeComponent[] {
             let homeComponent: HomeComponent = {
                 room: room,
                 component: component,
-                state: defaultState,
+                state: null,
                 btnOn: btnOn,
                 btnOff: btnOff
             };

@@ -1,5 +1,6 @@
-//Note personnelle: fichier .d.ts n'est pas compiler, il contient que des types
+//Note personnelle: ce fichier definie le model des données.
 
+//Note personnelle: fichier .d.ts n'est pas compiler, il contient que des types
 
 
 /**
@@ -9,7 +10,7 @@ export interface HomeComponent {
     /**
      * state correspond à état du bouton
      */
-    state: boolean;
+    state: boolean | null;
     /**
      * room correspond à la pièce dans laquelle se situe le component
      */

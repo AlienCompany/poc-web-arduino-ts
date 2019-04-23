@@ -1,6 +1,8 @@
 {
   "compilerOptions":  {
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "module": "es6",
+    "moduleResolution": "classic"
   },
   "include": [
     "src/server/public"
