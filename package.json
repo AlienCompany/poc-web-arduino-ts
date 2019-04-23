@@ -21,7 +21,7 @@
   "scripts": {
     "js-server": "node ./dist/server/index.js",
     "server": "ts-node ./src/server/index.ts",
-    "compile": "tsc -p ./"
+    "compile": "tsc src/server/public/script.ts --module es6 --inlineSourceMap true"
   },
   "author": "coco",
   "license": "ISC"
