@@ -34,7 +34,7 @@ function init() {
             homeComponent.room.id === data.roomName && homeComponent.component.id === data.componentName);
 
         if (hc != null) {
-            debugger;
+            
             if (hc.state !== data.state) {
                 hc.state = data.state;
                 if (hc.state) {
@@ -93,7 +93,7 @@ function getHomeComponents(): HomeComponent[] {
                 btnOn: btnOn,
                 btnOff: btnOff
             };
-            debugger;
+
             homeComponents.push(homeComponent);
 
         }
