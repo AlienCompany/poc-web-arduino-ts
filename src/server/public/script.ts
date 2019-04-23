@@ -49,14 +49,6 @@ function init() {
         document.body.classList.remove('online');
         document.body.classList.add('offline');
     });
-    /*
-     socket.on('customCliEvent1', (message) => {
-         console.log("customCliEvent1", message);
-     });
-     socket.on('customCliEvent2', (data) => {
-         console.log(data);
-     });
-     */
 
 }
 
@@ -121,7 +113,6 @@ function initButtonListerner(homeComponents: HomeComponent[]): void {
             console.log("On : componentId = ", homeComponent.component.id);
             socket.emit("srvEventBtnClick", componentStatus);
 
-            homeComponent.component.classList.add('enable');
         };
         btnOff.onclick = () => {
 
@@ -134,7 +125,6 @@ function initButtonListerner(homeComponents: HomeComponent[]): void {
             console.log("Off : componentId = ", homeComponent.component.id);
             socket.emit("srvEventBtnClick", componentStatus);
 
-            homeComponent.component.classList.remove('enable');
         };
 
     });
