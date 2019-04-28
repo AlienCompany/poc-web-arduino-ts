@@ -20,7 +20,10 @@
   },
   "scripts": {
     "js-server": "node ./dist/server/index.js",
+    "start": "npm run server",
     "server": "ts-node ./src/server/index.ts",
+    "listPort": "ts-node ./src/server/seriallist.ts",
+	"browser": "start \"\" http://localhost:8888/",
     "compile": "tsc src/server/public/script.ts --module es6 --inlineSourceMap true"
   },
   "author": "coco",
