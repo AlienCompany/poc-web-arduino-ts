@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cuisine</title>
+    <meta charset="utf-8"/>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
+<body onload="init()"> 
+    <a class= "btn" href= "ext.html">Extérieur</a>
+    <a class= "btn" href= "chambre.html">Chambre</a>
+    <a class= "btn" href= "salon.html">Salon</a>
+    <a class= "btn" href= "cuisine.htlm">Cuisine</a>
+    <a class= "btn" href= "sdb.html">Sdb</a>
+    <div id="text">
+    </div>
+
+    <div id="Cuisine" class="room">
+        <div id="light" class="component">
+            <div>img</div>
+            <button class="btn on">On</button>
+            <button class="btn off">Off</button>
+        </div>
+        <div id="shutter" class="component">
+            <div>img</div>
+            <button class="btn on">On</button>
+            <button class="btn off">Off</button>
+        </div>
+        <di id="dishwasher" class="component">
+            <div>img</div>
+            <button class="btn on">On</button>
+            <button class="btn on">On</button>
+        </di>
+        <div id="washing machine" class="component">
+            <div>img</div>
+            <button class="btn on">On</button>
+            <button class="btn off">Off</button>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
