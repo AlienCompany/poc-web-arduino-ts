@@ -3,44 +3,70 @@
 
 <head>
     <title>Salon</title>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
-<body onload="init()"> 
-    <a class= "btn" href= "ext.html">Extérieur</a>
-    <a class= "btn" href= "chambre.html">Chambre</a>
-    <a class= "btn" href= "salon.html">Salon</a>
-    <a class= "btn" href= "cuisine.html">Cuisine</a>
-    <a class= "btn" href= "sdb.html">Sdb</a>
+
+<body onload="init()">
+    <a class="btn" href="ext.html">Extérieur</a>
+    <a class="btn" href="chambre.html">Chambre</a>
+    <a class="btn" href="salon.html">Salon</a>
+    <a class="btn" href="cuisine.html">Cuisine</a>
+    <a class="btn" href="sdb.html">Sdb</a>
     <div id="text">
     </div>
 
     <div id="salon" class="room">
-        <div id="computer" class="component">
-            <div>img</div>
-            <button class="btn on">On</button>
-            <button class="btn off">Off</button>
+        <div class="container">
+            <div id="computer" class="component">
+
+                <div>
+                    <img src="image/computer.svg" alt="Ordinateur">
+                </div>
+                <button class="btn on">On</button>
+                <button class="btn off">Off</button>
+            </div>
         </div>
-        <div id="light" class="component">
-            <div>img</div>
-            <button class="btn on">On</button>
-            <button class="btn off">Off</button>
+        <div class="container">
+            <div id="light" class="component">
+                <div>
+                    <img src="image/light.svg" alt="lumière">
+                </div>
+                <button class="btn on">On</button>
+                <button class="btn off">Off</button>
+            </div>
         </div>
-        <div id="shutter" class="component">
-            <div>img</div>
-            <button class="btn on">On</button>
-            <button class="btn off">Off</button>
+        <div class="container">
+            <div id="shutter" class="component">
+
+                <div>
+                    <img src="image/shutters.svg" alt="volets">
+                </div>
+                <button class="btn on">On</button>
+                <button class="btn off">Off</button>
+            </div>
         </div>
-        <div id="tv" class="component">
-            <div>img</div>
-            <button class="btn on">On</button>
-            <button class="btn off">Off</button>
+        <div class="container">
+            <div id="tv" class="component">
+
+                <div>
+                    <img src="image/tv.svg" alt="Télé">
+                </div>
+                <button class="btn on">On</button>
+                <button class="btn off">Off</button>
+            </div>
         </div>
-        <div id="printer" class="component">
-            <div>img</div>
-            <button class="btn on">On</button>
-            <button class="btn off">Off</button>
+        <div class="container">
+            <div id="printer" class="component">
+
+                <div>
+                    <img src="image/printer.svg" alt="imprimente">
+                </div>
+                <button class="btn on">On</button>
+                <button class="btn off">Off</button>
+            </div>
         </div>
     </div>
 

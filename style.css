@@ -1,0 +1,28 @@
+.component.enable .btn.on, .component:not(.enable) .btn.off {
+    text-decoration: none;
+    background-color: #616161;
+    color: #BDBDBD;
+
+/*bouton on appuié et non off*/
+}
+
+.component:not(.enable) .btn.on, .component.enable .btn.off {
+    text-decoration: none;
+    background-color: #BDBDBD;
+    color: #616161;
+}
+.image{
+}
+.room {
+    display: flex;
+}
+.component{
+    background: #ffc5c5;
+    flex-shrink: 1;
+}
+.component.enable{
+    background: #baffc0;
+}
+.offline .component{
+    background: #dddddd;
+}

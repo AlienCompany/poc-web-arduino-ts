@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <title>Cuisine</title>
+    <title>Sdb</title>
     <meta charset="utf-8" />
     <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel= "stylesheet" href= "style.css">
 </head>
 <!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
 
@@ -13,12 +13,12 @@
     <a class="btn" href="ext.html">Extérieur</a>
     <a class="btn" href="chambre.html">Chambre</a>
     <a class="btn" href="salon.html">Salon</a>
-    <a class="btn" href="cuisine.htlm">Cuisine</a>
+    <a class="btn" href="cuisine.html">Cuisine</a>
     <a class="btn" href="sdb.html">Sdb</a>
     <div id="text">
     </div>
 
-    <div id="Cuisine" class="room">
+    <div id="sdb" class="room">
         <div class="container">
             <div id="light" class="component">
                 <div>
@@ -29,30 +29,18 @@
             </div>
         </div>
         <div class="container">
-            <div id="shutter" class="component">
-
+            <div id="radiator" class="component">
                 <div>
-                    <img src="image/shutters.svg" alt="volets">
+                    <img src="image/radiator.svg" alt="radiateur">
                 </div>
                 <button class="btn on">On</button>
                 <button class="btn off">Off</button>
             </div>
         </div>
         <div class="container">
-            <div id="dishwasher" class="component">
-
+            <div id="shutter" class="component">
                 <div>
-                    <img src="image/dishwasher.svg" alt="lave vaisselles">
-                </div>
-                <button class="btn on">On</button>
-                <button class="btn on">Off</button>
-            </div>
-        </div>
-        <div class="container">
-            <div id="washing machine" class="component">
-
-                <div>
-                    <img src="image/washing-machine.svg" alt="lave linges">
+                    <img src="image/shutters.svg" alt="volet">
                 </div>
                 <button class="btn on">On</button>
                 <button class="btn off">Off</button>
