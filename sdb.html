@@ -5,39 +5,39 @@
     <title>Sdb</title>
     <meta charset="utf-8" />
     <script src="/socket.io/socket.io.js"></script>
-    <link rel= "stylesheet" href= "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
 
 <body onload="init()">
-    <a class="btn" href="ext.html">Extérieur</a>
-    <a class="btn" href="chambre.html">Chambre</a>
-    <a class="btn" href="salon.html">Salon</a>
-    <a class="btn" href="cuisine.html">Cuisine</a>
-    <a class="btn" href="sdb.html">Sdb</a>
-    <div id="text">
-    </div>
+    <div class="bbbody">
+        <div class="nav">
+            <a class="btn" href="ext.html">Extérieur</a>
+            <a class="btn" href="chambre.html">Chambre</a>
+            <a class="btn" href="salon.html">Salon</a>
+            <a class="btn" href="cuisine.html">Cuisine</a>
+            <a class="btn" href="sdb.html">Sdb</a>
+        </div>
+        <div id="text">
+        </div>
 
-    <div id="sdb" class="room">
-        <div class="container">
-            <div id="light" class="component">
-                <div>
-                    <img src="image/light.svg" alt="lumière">
+        <div id="sdb" class="room">
+            <div class="box-1">
+                <div id="light" class="component">
+                    <div>
+                        <img src="image/light.svg" alt="lumière">
+                    </div>
+                    <button class="btn on">On</button>
+                    <button class="btn off">Off</button>
                 </div>
-                <button class="btn on">On</button>
-                <button class="btn off">Off</button>
-            </div>
-        </div>
-        <div class="container">
-            <div id="radiator" class="component">
-                <div>
-                    <img src="image/radiator.svg" alt="radiateur">
+                <div id="radiator" class="component">
+                    <div>
+                        <img src="image/radiator.svg" alt="radiateur">
+                    </div>
+                    <button class="btn on">On</button>
+                    <button class="btn off">Off</button>
                 </div>
-                <button class="btn on">On</button>
-                <button class="btn off">Off</button>
             </div>
-        </div>
-        <div class="container">
             <div id="shutter" class="component">
                 <div>
                     <img src="image/shutters.svg" alt="volet">
@@ -46,10 +46,8 @@
                 <button class="btn off">Off</button>
             </div>
         </div>
+        <script src="/script.js"></script>
     </div>
-
-    <script src="/script.js"></script>
-
 </body>
 
 </html>

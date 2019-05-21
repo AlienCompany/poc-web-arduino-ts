@@ -10,58 +10,55 @@
 <!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
 
 <body onload="init()">
-    <a class="btn" href="ext.html">Extérieur</a>
-    <a class="btn" href="chambre.html">Chambre</a>
-    <a class="btn" href="salon.html">Salon</a>
-    <a class="btn" href="cuisine.htlm">Cuisine</a>
-    <a class="btn" href="sdb.html">Sdb</a>
-    <div id="text">
+    <div class="bbbody">
+        <div class="nav">
+            <a class="btn" href="ext.html">Extérieur</a>
+            <a class="btn" href="chambre.html">Chambre</a>
+            <a class="btn" href="salon.html">Salon</a>
+            <a class="btn" href="cuisine.htlm">Cuisine</a>
+            <a class="btn" href="sdb.html">Sdb</a>
+        </div>
+        <div id="text">
+        </div>
+
+        <div id="Cuisine" class="room">
+            <div class="box-1">
+                <div id="light" class="component">
+                    <div>
+                        <img src="image/light.svg" alt="lumière">
+                    </div>
+                    <button class="btn on">On</button>
+                    <button class="btn off">Off</button>
+                </div>
+                <div id="shutter" class="component">
+                    <div>
+                        <img src="image/shutters.svg" alt="volets">
+                    </div>
+                    <button class="btn on">On</button>
+                    <button class="btn off">Off</button>
+                </div>
+            </div>
+            <div class="box-2">
+                <div id="dishwasher" class="component">
+
+                    <div>
+                        <img src="image/dishwasher.svg" alt="lave vaisselles">
+                    </div>
+                    <button class="btn on">On</button>
+                    <button class="btn off">Off</button>
+                </div>
+                <div id="washing-machine" class="component">
+                    <div>
+                        <img src="image/washing-machine.svg" alt="lave linges">
+                    </div>
+                    <button class="btn on">On</button>
+                    <button class="btn off">Off</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="/script.js"></script>
     </div>
-
-    <div id="Cuisine" class="room">
-        <div class="container">
-            <div id="light" class="component">
-                <div>
-                    <img src="image/light.svg" alt="lumière">
-                </div>
-                <button class="btn on">On</button>
-                <button class="btn off">Off</button>
-            </div>
-        </div>
-        <div class="container">
-            <div id="shutter" class="component">
-
-                <div>
-                    <img src="image/shutters.svg" alt="volets">
-                </div>
-                <button class="btn on">On</button>
-                <button class="btn off">Off</button>
-            </div>
-        </div>
-        <div class="container">
-            <div id="dishwasher" class="component">
-
-                <div>
-                    <img src="image/dishwasher.svg" alt="lave vaisselles">
-                </div>
-                <button class="btn on">On</button>
-                <button class="btn on">Off</button>
-            </div>
-        </div>
-        <div class="container">
-            <div id="washing machine" class="component">
-
-                <div>
-                    <img src="image/washing-machine.svg" alt="lave linges">
-                </div>
-                <button class="btn on">On</button>
-                <button class="btn off">Off</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="/script.js"></script>
-
 </body>
 
 </html>

@@ -11,18 +11,41 @@
     background-color: #BDBDBD;
     color: #616161;
 }
-.image{
-}
 .room {
     display: flex;
+    justify-content: center;
 }
 .component{
     background: #ffc5c5;
-    flex-shrink: 1;
 }
 .component.enable{
     background: #baffc0;
 }
 .offline .component{
     background: #dddddd;
+}
+.bbbody{
+    width:50%;
+    height: 50%;
+    background-color: #ced6e0;
+    margin: 32%;
+    justify-content: space-between;
+}
+.nav{
+    background-color: #353b48;
+    text-align: center;  
+    padding: 12px 0;
+}
+.nav .btn{
+    color:#ff3838;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    border: 1px solid #ff3838;
+    border-radius: 3px;
+    padding: 3px 10px 3px 10px;
+    margin: 0 5px 5px 5px;
+}
+.nav .btn:hover{
+    background-color: #ff3838;
+    color:#f1f2f6;
 }
