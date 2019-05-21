@@ -13,10 +13,14 @@
 }
 .room {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 .component{
     background: #ffc5c5;
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    
 }
 .component.enable{
     background: #baffc0;
@@ -25,11 +29,10 @@
     background: #dddddd;
 }
 .bbbody{
-    width:50%;
+    width: 50%;
     height: 50%;
     background-color: #ced6e0;
-    margin: 32%;
-    justify-content: space-between;
+    margin:32%;
 }
 .nav{
     background-color: #353b48;
@@ -48,4 +51,13 @@
 .nav .btn:hover{
     background-color: #ff3838;
     color:#f1f2f6;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px; 
+}
+.bouton{
+    display: flex;
+    justify-content: center;
 }
