@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extérieur</title>
+    <meta charset="utf-8" />
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:600&display=swap" rel="stylesheet"> 
+</head>
+<!--Note personnelle : onload="init()" permet d'appeller la fonction quand le body est chargé-->
+
+<body onload="init()">
+    <div class="bbbody">
+        <div class="title">Outside control</div>
+        <div class="nav">
+            <a class="btn" href="ext.html">Extérieur</a>
+            <a class="btn" href="chambre.html">Chambre</a>
+            <a class="btn" href="salon.html">Salon</a>
+            <a class="btn" href="cuisine.html">Cuisine</a>
+            <a class="btn" href="sdb.html">Sdb</a>
+        </div>
+        <div id="text">
+        </div>
+        <div id="ext" class="room">
+            <div class="box">
+                <div id="light" class="component">
+                    <img src="image/light.svg" alt="lumière">
+                    <div class="bouton">
+                        <button class="btn on">On</button>
+                        <button class="btn off">Off</button>
+                    </div>
+                </div>
+                <div id="garage" class="component">
+                    <img src="image/garage.svg" alt="garage">
+                    <div class="bouton">
+                        <button class="btn on">On</button>
+                        <button class="btn off">Off</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div id="door" class="component">
+                    <img src="image/door.svg" alt="porte">
+                    <div class="bouton">
+                        <button class="btn on">On</button>
+                        <button class="btn off">Off</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/script.js"></script>
+    </div>
+</body>
+
+</html>

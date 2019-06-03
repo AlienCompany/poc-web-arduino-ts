@@ -82,23 +82,24 @@ function init() {
                     });
                 }
                 else{
-                    console.log('Il n\'y a aucun appareil connecté en port série');
+                    console.log('Il n\'y a aucun    appareil connecté en port série');
                 }
             })
         }
     });
 
     usbPort.on('open', function () {
-        server.listen(port, () => {
+        server.listen(port, () => { // port = 8888
+            open('http://localhost:' + port + '/ext.html'); // open => ouvrir le navigateur
             myLog('+ Server listen on port: ' + port);
-            open('http://localhost:' + port + '/');
+
         });
-        app.use(express.static(__dirname + '/public')); //requête sur le site redirigé vers le dossier public
+        app.use(express.static(__dirname + '/public')); //requête http récupère le contenue du dossier public
 
         ioServer.on('connection', (socket: Socket) => onClientConnection(socket));
 
         const parser: Readline = usbPort.pipe(new Readline({delimiter: '\n'}));
-        parser.on('data', (line: string) => receiveArduinoLine(line));
+        parser.on('data', (line: string) => receiveArduinoLine(line)); // écoute le port de l'arduino et récupère les data quand il y en a
     });
 
 

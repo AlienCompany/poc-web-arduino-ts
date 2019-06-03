@@ -1,10 +1,10 @@
 echo off
-set PATH=%PATH%;%cd%\..\nodejs
+set PATH=%cd%\..\nodejs;%PATH%
 cls
 echo ========================================================================================
 echo =================================== CMD WITH NODE :) ===================================
 echo ========================================================================================
-echo commande:
+echo commandes:
 echo   - "npm start" for start the server and add the port of arduino,
 echo     exemple: 
 echo        npm start COM16

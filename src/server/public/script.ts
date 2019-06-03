@@ -28,8 +28,7 @@ function init() {
 
     socket.on('onReceiveComponentsStates', (data: HomeComponentStatus) => {
 
-        const hc = homeComponents.find((homeComponent) =>
-            homeComponent.room.id === data.roomName && homeComponent.component.id === data.componentName);
+        const hc = homeComponents.find((homeComponent) => homeComponent.room.id === data.roomName && homeComponent.component.id === data.componentName);
 
         if (hc != null) {
             
@@ -53,7 +52,7 @@ function init() {
 }
 
 /**
- * getHomeComponents Récupère la liste des composants
+ * getHomeComponents Récupère la liste des composants du DOM
  */
 function getHomeComponents(): HomeComponent[] {
 
