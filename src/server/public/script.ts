@@ -48,7 +48,6 @@ function init() {
         document.body.classList.remove('online');
         document.body.classList.add('offline');
     });
-
 }
 
 /**
